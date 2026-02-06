@@ -3,9 +3,12 @@ import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 export const LocationSection = () => {
   const openMaps = () => {
+    const address =
+      "Metro Pillar No-01, Teja Circle, 1st Floor, ML Tower, Gopalpura Bypass Rd, near Drom Marble, Mansarovar, Jaipur, Rajasthan 302020";
+
     window.open(
-      "https://www.google.com/maps/search/?api=1&query=Metro+Pillar+No-01+Teja+Circle+ML+Tower+Mansarovar+Jaipur",
-      "_blank"
+      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`,
+      "_blank",
     );
   };
 
@@ -47,10 +50,14 @@ export const LocationSection = () => {
                   <MapPin className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Address</h3>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Address
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Metro Pillar No-01, Teja Circle, 1st Floor, ML Tower,<br />
-                    Gopalpura Bypass Rd, near Drom Marble,<br />
+                    Metro Pillar No-01, Teja Circle, 1st Floor, ML Tower,
+                    <br />
+                    Gopalpura Bypass Rd, near Drom Marble,
+                    <br />
                     Mansarovar, Jaipur, Rajasthan – 302020
                   </p>
                 </div>
@@ -62,7 +69,10 @@ export const LocationSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <a href="tel:+917568798310" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="tel:+917568798310"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     +91 75687 98310
                   </a>
                 </div>
@@ -81,7 +91,12 @@ export const LocationSection = () => {
               </div>
             </div>
 
-            <Button variant="hero" size="lg" onClick={openMaps} className="w-full sm:w-auto">
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={openMaps}
+              className="w-full sm:w-auto"
+            >
               <Navigation className="h-5 w-5" />
               Get Directions
             </Button>
