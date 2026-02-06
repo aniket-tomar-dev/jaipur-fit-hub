@@ -7,7 +7,9 @@ export const LocationSection = () => {
       "Metro Pillar No-01, Teja Circle, 1st Floor, ML Tower, Gopalpura Bypass Rd, near Drom Marble, Mansarovar, Jaipur, Rajasthan 302020";
 
     window.open(
-      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`,
+      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        address,
+      )}`,
       "_blank",
     );
   };
@@ -19,9 +21,11 @@ export const LocationSection = () => {
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wider uppercase mb-4">
             Find Us
           </span>
+
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
             Visit <span className="text-gradient-primary">Sky Fitness</span>
           </h2>
+
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Conveniently located near Metro Pillar No-01 in Mansarovar
           </p>
@@ -31,7 +35,7 @@ export const LocationSection = () => {
           {/* Map */}
           <div className="aspect-[4/3] lg:aspect-auto lg:h-full min-h-[300px] rounded-2xl overflow-hidden border border-border">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.8489168619847!2d75.7673!3d26.8649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUxJzUzLjYiTiA3NcKwNDYnMDIuMyJF!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4232.18649652684!2d75.73685193569942!3d26.877127312673025!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db57775fe9a8b%3A0xf5a01442ac733f27!2sSky%20Fitness%20Jaipur!5e0!3m2!1sen!2sus!4v1770413363260!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 300 }}
